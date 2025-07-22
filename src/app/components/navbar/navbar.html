@@ -1,0 +1,70 @@
+<nav class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-3 cursor-pointer" routerLink="home">
+        <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="brain-circuit" class="lucide lucide-brain-circuit w-6 h-6 text-white"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M9 13a4.5 4.5 0 0 0 3-4"></path><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path><path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path><path d="M6 18a4 4 0 0 1-1.967-.516"></path><path d="M12 13h4"></path><path d="M12 18h6a2 2 0 0 1 2 2v1"></path><path d="M12 8h8"></path><path d="M16 8V5a2 2 0 0 1 2-2"></path><circle cx="16" cy="13" r=".5"></circle><circle cx="18" cy="3" r=".5"></circle><circle cx="20" cy="21" r=".5"></circle><circle cx="20" cy="8" r=".5"></circle></svg>
+        </div>
+        <span class="text-xl font-bold text-white">IAWOT</span>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+        <button routerLink="about" routerLinkActive="text-white" class="nav-link text-gray-400 hover:text-white transition-colors duration-300">
+            Acerca de
+        </button>
+        <button routerLink="install" routerLinkActive="text-white" class="nav-link text-gray-400 hover:text-white transition-colors duration-300">
+            Instalación
+        </button>
+        <button routerLink="config" routerLinkActive="text-white" class="nav-link text-gray-400 hover:text-white transition-colors duration-300">
+            Configuración
+        </button>
+        <button routerLink="mcps" routerLinkActive="text-white" class="nav-link text-gray-400 hover:text-white transition-colors duration-300">
+            MCPs
+        </button>
+        <button routerLink="example" routerLinkActive="text-white" class="nav-link text-gray-400 hover:text-white transition-colors duration-300">
+            Ejemplos
+        </button>
+        </div>
+        
+        <!-- CTA Button -->
+        <div class="hidden md:block">
+        <button routerLink="install" class="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300">
+            Comenzar
+        </button>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button (click)="toggleMobileMenu()" class="md:hidden text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="menu" class="lucide lucide-menu w-6 h-6"><path d="M4 12h16"></path><path d="M4 18h16"></path><path d="M4 6h16"></path></svg>
+        </button>
+    </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    @if (isMenuActive()) {
+        <div id="mobileMenu" class="md:hidden bg-slate-900/95 backdrop-blur-lg border-b border-white/10">
+    <div class="px-6 py-4 space-y-3">
+        <button routerLink="about" routerLinkActive="text-white" class="block w-full text-left text-gray-400 hover:text-white transition-colors duration-300 py-2">
+        Acerca de
+        </button>
+        <button routerLink="install" routerLinkActive="text-white" class="block w-full text-left text-gray-400 hover:text-white transition-colors duration-300 py-2">
+        Instalación
+        </button>
+        <button routerLink="config" routerLinkActive="text-white" class="block w-full text-left text-gray-400 hover:text-white transition-colors duration-300 py-2">
+        Configuración
+        </button>
+        <button routerLink="mcps" routerLinkActive="text-white" class="block w-full text-left text-gray-400 hover:text-white transition-colors duration-300 py-2">
+        MCPs
+        </button>
+        <button routerLink="examples" routerLinkActive="text-white" class="block w-full text-left text-gray-400 hover:text-white transition-colors duration-300 py-2">
+        Ejemplos
+        </button>
+        <button routerLink="install" routerLinkActive="text-white" class="w-full mt-4 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full">
+        Comenzar Ahora
+        </button>
+    </div>
+    </div>
+    }
+</nav>
