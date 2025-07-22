@@ -16,9 +16,10 @@
             <h3 class="text-xl font-bold text-white">Sequential Thinking</h3>
         </div>
         <p class="text-gray-300 mb-6">Mejora el razonamiento paso a paso para análisis más profundos.</p>
-        <div class="bg-slate-800/50 rounded-lg p-4 font-mono text-sm">
-            <code class="text-green-400">npm install -g &#64;modelcontextprotocol/server-sequential-thinking</code>
-        </div>
+        <app-code-container title="Terminal">
+            npm install -g &#64;modelcontextprotocol/server-sequential-thinking
+        </app-code-container>
+
         </div>
         
         <!-- Context7 -->
@@ -30,9 +31,11 @@
             <h3 class="text-xl font-bold text-white">Context7</h3>
         </div>
         <p class="text-gray-300 mb-6">Acceso a base de conocimientos y contexto extendido.</p>
-        <div class="bg-slate-800/50 rounded-lg p-4 font-mono text-sm">
-            <code class="text-green-400">claude mcp add --transport http context7 https://mcp.context7.com/mcp</code>
-        </div>
+        <app-code-container title="Terminal">
+            <span>claude mcp add --transport http context7</span>
+            <span>https://mcp.context7.com/mcp</span>
+        </app-code-container>
+
         </div>
         
         <!-- Puppeteer -->
@@ -44,9 +47,10 @@
             <h3 class="text-xl font-bold text-white">Puppeteer</h3>
         </div>
         <p class="text-gray-300 mb-6">Automatización web y scraping inteligente.</p>
-        <div class="bg-slate-800/50 rounded-lg p-4 font-mono text-sm">
-            <code class="text-green-400">npm install -g &#64;modelcontextprotocol/server-puppeteer</code>
-        </div>
+        <app-code-container title="Terminal">
+            npm install -g &#64;modelcontextprotocol/server-puppeteer
+        </app-code-container>
+
         </div>
         
         <!-- Magic UI -->
@@ -58,9 +62,11 @@
             <h3 class="text-xl font-bold text-white">Magic UI Design</h3>
         </div>
         <p class="text-gray-300 mb-6">Generación automática de interfaces modernas.</p>
-        <div class="bg-slate-800/50 rounded-lg p-4 font-mono text-sm">
-            <code class="text-green-400">npm install -g &#64;magicuidesign/mcp&#64;latest</code>
-        </div>
+        
+        <app-code-container title="Terminal">
+            npm install -g &#64;magicuidesign/mcp&#64;latest
+        </app-code-container>
+
         </div>
     </div>
     
@@ -71,18 +77,20 @@
         <h3 class="text-xl font-bold text-white">Script de Instalación Completa</h3>
         </div>
         <p class="text-gray-300 mb-4">Instala todos los MCPs de una vez:</p>
-        <div class="bg-slate-800/50 rounded-lg p-6 font-mono text-sm overflow-x-auto">
-        <pre class="text-green-400"># Instalar todos los MCPs
-npm install -g &#64;modelcontextprotocol/server-sequential-thinking
-npm install -g &#64;modelcontextprotocol/server-puppeteer
-npm install -g &#64;magicuidesign/mcp&#64;latest
+        
+        <app-code-container title="Terminal">
+            <span># Instalar todos los MCPs</span>
+            <span>npm install -g &#64;modelcontextprotocol/server-sequential-thinking</span>
+            <span>npm install -g &#64;modelcontextprotocol/server-puppeteer</span>
+            <span>npm install -g &#64;magicuidesign/mcp&#64;latest</span>
 
-# Añadir a Claude
-claude mcp add-json sequential-thinking '&#123;"command": "npx", "args": ["-y", "&#64;modelcontextprotocol/server-sequential-thinking"]&#125;'
-claude mcp add --transport http context7 https://mcp.context7.com/mcp
-claude mcp add-json puppeteer '&#123;"command": "npx", "args": ["-y", "&#64;modelcontextprotocol/server-puppeteer"]&#125;'
-claude mcp add-json magic '&#123;"command": "npx", "args": ["-y", "&#64;magicuidesign/mcp&#64;latest"]&#125;'</pre>
-        </div>
+            <span># Añadir a Claude</span>
+            <span>claude mcp add-json sequential-thinking '&#123;"command": "npx", "args": ["-y", "&#64;modelcontextprotocol/server-sequential-thinking"]&#125;'</span>
+            <span>claude mcp add-json puppeteer '&#123;"command": "npx", "args": ["-y", "&#64;modelcontextprotocol/server-puppeteer"]&#125;'</span>
+            <span>claude mcp add --transport http context7 https://mcp.context7.com/mcp</span>
+            <span>claude mcp add-json magic '&#123;"command": "npx", "args": ["-y", "&#64;magicuidesign/mcp&#64;latest"]&#125;'</span>
+        </app-code-container>
+
     </div>
     
     <!-- Important Notes -->

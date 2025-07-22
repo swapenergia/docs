@@ -15,4 +15,8 @@ export class Navbar {
     this.isMenuActive.update( value => !value);
   }
 
+  closeMobileMenu(){
+    this.isMenuActive.set(false);
+  }
+
 }

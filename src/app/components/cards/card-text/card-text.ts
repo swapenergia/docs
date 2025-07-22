@@ -8,7 +8,8 @@ import { Component, input } from '@angular/core';
 })
 export class CardText {
   
-  bg_gradiant = input<string>('from-purple-500 to-pink-500');
+  icon = input<string>('iawot-avatar');
+  icon_bg_gradiant = input<string>('from-purple-500 to-pink-500');
   title = input<string>('title example');
   description = input<string>('dedscription example');
 }

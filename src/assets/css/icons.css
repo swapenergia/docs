@@ -1,0 +1,55 @@
+/* General icon styles */
+.iawot-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  -webkit-mask-size: contain; /* Para navegador WebKit */
+  mask-size: contain;         /* Para otros navegadores */
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-size: contain;
+  background-position: center;
+  background-color: currentColor; /* Aquí puedes cambiar el color del icono */
+}
+
+.iawot-avatar{
+    -webkit-mask-image: url("../icons/avatar.svg");
+    mask-image: url("../icons/avatar.svg");
+}
+
+.iawot-box{
+    -webkit-mask-image: url("../icons/box.svg");
+    mask-image: url("../icons/box.svg");
+}
+
+.iawot-brain{
+    -webkit-mask-image: url("../icons/brain.svg");
+    mask-image: url("../icons/brain.svg");
+}
+
+.iawot-lightning{
+    -webkit-mask-image: url("../icons/lightning.svg");
+    mask-image: url("../icons/lightning.svg");
+}
+
+.iawot-rocket{
+    -webkit-mask-image: url("../icons/rocket.svg");
+    mask-image: url("../icons/rocket.svg");
+}
+
+.iawot-warning{
+    -webkit-mask-image: url("../icons/warning.svg");
+    mask-image: url("../icons/warning.svg");
+}
+
+.iawot-world{
+    -webkit-mask-image: url("../icons/world.svg");
+    mask-image: url("../icons/world.svg");
+}
+
+.iawot-copy{
+    -webkit-mask-image: url("../icons/copy.svg");
+    mask-image: url("../icons/copy.svg");
+}

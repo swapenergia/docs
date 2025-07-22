@@ -1,0 +1,39 @@
+/* Mobile menu transitions */
+#mobileMenu {
+  transition: all 0.3s ease-in-out;
+}
+
+#mobileMenu:not(.hidden) {
+  animation: slideDown 0.3s ease-out;
+}
+
+
+/* Code block styling */
+pre, code {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+}
+
+/* Hover effects */
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Loading states */
+.loading {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Focus styles */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgba(168, 85, 247, 0.5);
+  outline-offset: 2px;
+}
+
+/* Glass effect */
+.glass {
+    backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
