@@ -11,13 +11,13 @@ export const routes: Routes = [
         path: '',
         component: MainLayout,
         children:[
-            { path: 'home', component: HomePage },
+            { path: '', component: HomePage },
             { path: 'install',component: InstallPage },
             { path: 'config', component: ConfigPage},
             { path: 'mcps', component: McpsPage },
             { path: 'example', component: ExamplePage},
 
-            { path: '**', redirectTo: 'home', pathMatch: 'full' }
+            { path: '**', redirectTo: '' }
             
         ]
     }

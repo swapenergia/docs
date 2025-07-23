@@ -14,6 +14,6 @@ export class CardBlank {
   iconColor = input<string>('text-white');
   iconBgGradient = input<string>('from-blue-500 to-indigo-500');
   cardTitle = input<string>('');
-
+  labelText = input<string | undefined>(undefined);
 
 }

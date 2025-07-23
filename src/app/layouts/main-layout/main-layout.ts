@@ -11,4 +11,11 @@ import { Footer } from '../../components/footer/footer';
 })
 export class MainLayout {
 
+    scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+  
 }

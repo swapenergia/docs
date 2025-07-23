@@ -1,0 +1,14 @@
+.link-active{
+  color: white;
+}
+
+.link-active div{
+  opacity: 1;
+  transform: scale(1.5);
+  transition: all 0.3s;
+}
+
+.link-active span {
+  transform: translateX(0.25rem); /* equivale a translate-x-1 en Tailwind */
+  transition: transform 0.3s;
+}

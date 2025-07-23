@@ -82,3 +82,8 @@
     -webkit-mask-image: url("../icons/steps.svg");
     mask-image: url("../icons/steps.svg");
 }
+
+.iawot-check{
+    -webkit-mask-image: url("../icons/check.svg");
+    mask-image: url("../icons/check.svg");
+}

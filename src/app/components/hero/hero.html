@@ -26,10 +26,10 @@
     </p>
     
     <div class="flex flex-wrap gap-4 justify-center mb-12 animate-fade-in-up animation-delay-400" style="opacity: 1; transform: translateY(0px);">
-        <button routerLink="/install" class="px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
+        <button routerLink="/install" class="cursor-pointer px-8 py-4 bg-white text-gray-900 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
         Comenzar Ahora
         </button>
-        <button routerLink="/about" class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+        <button routerLink="/example" class="cursor-pointer px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border border-white/20 hover:scale-105 hover:bg-white/20 transition-all duration-300">
         Más Información
         </button>
     </div>
@@ -51,7 +51,7 @@
     </div>
     
     <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div (click)="scrollDown()" class="cursor-pointer absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-6 h-6 text-white/50"><path d="m6 9 6 6 6-6"></path></svg>
     </div>
 </section>

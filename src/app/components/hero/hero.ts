@@ -9,4 +9,12 @@ import { RouterLink } from '@angular/router';
 })
 export class Hero {
 
+  scrollDown() {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+  }
+
+
 }
