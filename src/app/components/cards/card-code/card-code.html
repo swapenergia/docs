@@ -1,0 +1,20 @@
+<div
+  class="h-full bg-gradient-to-br {{ gradientBg() }}  backdrop-blur-lg rounded-2xl border {{ borderBg() }} p-8 hover:scale-105 transition-transform duration-300 animate-fade-in-up animation-delay-200"
+  style="opacity: 1; transform: translateY(0px)"
+>
+  <div class="flex items-center gap-3 mb-6">
+    <div
+      class="w-12 h-12 {{ iconBg() }} rounded-xl flex items-center justify-center"
+    >
+      <span class="iawot-icon {{ icon() }} {{ iconColor() }}"></span>
+    </div>
+    <h3 class="text-xl font-bold text-white"> {{ title() }} </h3>
+  </div>
+  <p class="text-gray-300 mb-6">
+    {{ description() }}
+  </p>
+  <app-code-container title="{{ codeContainerTitle() }}">
+    <ng-content></ng-content>
+    </app-code-container
+  >
+</div>

@@ -53,3 +53,27 @@
     -webkit-mask-image: url("../icons/copy.svg");
     mask-image: url("../icons/copy.svg");
 }
+.iawot-brain-full{
+    -webkit-mask-image: url("../icons/brain-full.svg");
+    mask-image: url("../icons/brain-full.svg");
+}
+
+.iawot-database{
+    -webkit-mask-image: url("../icons/database.svg");
+    mask-image: url("../icons/database.svg");
+}
+
+.iawot-mouse-pointer{
+    -webkit-mask-image: url("../icons/mouse-pointer.svg");
+    mask-image: url("../icons/mouse-pointer.svg");
+}
+
+.iawot-magic{
+    -webkit-mask-image: url("../icons/magic.svg");
+    mask-image: url("../icons/magic.svg");
+}
+
+.iawot-shell{
+    -webkit-mask-image: url("../icons/shell.svg");
+    mask-image: url("../icons/shell.svg");
+}
