@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,5 +8,17 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer.css'
 })
 export class Footer {
+
+  year = computed(() =>{
+    const date = new Date();
+    return date.getFullYear();
+  });
+
+  scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
 }

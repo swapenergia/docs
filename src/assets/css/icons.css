@@ -77,3 +77,8 @@
     -webkit-mask-image: url("../icons/shell.svg");
     mask-image: url("../icons/shell.svg");
 }
+
+.iawot-steps{
+    -webkit-mask-image: url("../icons/steps.svg");
+    mask-image: url("../icons/steps.svg");
+}

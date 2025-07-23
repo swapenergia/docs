@@ -1,4 +1,4 @@
-<div class="bg-slate-800/50 rounded-xl p-6 font-mono">
+<div class="bg-slate-800/50 rounded-xl p-6 font-mono w-full">
   <div class="flex items-center justify-between" [class.mb-4]="title()" [class.justify-end]="!title()">
     @if (title()) {
         <span class="text-sm text-gray-400"> {{ title() }}</span>
@@ -10,7 +10,7 @@
     </button>
 
   </div>
-  <code #codeElement class="text-green-400 flex flex-col">
+  <code #codeElement class="text-green-400 flex flex-col overflow-x-auto">
     <ng-content></ng-content>
   </code>
 </div>

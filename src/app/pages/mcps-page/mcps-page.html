@@ -1,83 +1,117 @@
-<section class="min-h-screen pt-24 pb-16 px-6">
-    <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16 animate-fade-in-up" style="opacity: 1; transform: translateY(0px);">
-        <h1 class="text-5xl font-bold text-white mb-6">Model Context Protocol</h1>
-        <p class="text-xl text-gray-300">Extiende las capacidades de Claude con herramientas especializadas</p>
-    </div>
-    
-    <!-- MCP Grid -->
-    <div class="grid md:grid-cols-2 gap-8 mb-12">
-
-        <!-- Sequential Thinking -->
-        <app-card-code icon="iawot-brain-full" title="Sequential Thinking"
-            description="Mejora el razonamiento paso a paso para análisis más profundos."
-            codeContainerTitle="Terminal">
-            npm install -g &#64;modelcontextprotocol/server-sequential-thinking
-        </app-card-code>
-
-        <!-- Context7 -->
-         <app-card-code gradientBg="from-cyan-500/10 to-blue-500/10" 
-            borderBg="border-cyan-500/20" icon="iawot-database" iconBg="bg-cyan-500/20" 
-            iconColor="text-cyan-400" title="Context7"
-            description="Acceso a base de conocimientos y contexto extendido."
-            codeContainerTitle="Terminal">
-            <span>claude mcp add --transport http context7</span>
-            <span>https://mcp.context7.com/mcp</span>
-        </app-card-code>
-        
-        <!-- Puppeteer -->
-        <app-card-code gradientBg="from-emerald-500/10 to-teal-500/10" 
-            borderBg="border-emerald-500/20" icon="iawot-mouse-pointer" iconBg="bg-emerald-500/20" 
-            iconColor="text-emerald-400" title="Puppeteer"
-            description="Automatización web y scraping inteligente."
-            codeContainerTitle="Terminal">
-            npm install -g &#64;modelcontextprotocol/server-puppeteer
-        </app-card-code>
-
-        
-        <!-- Magic UI -->
-        <app-card-code gradientBg="from-rose-500/10 to-pink-500/10" 
-            borderBg="border-rose-500/20" icon="iawot-magic" iconBg="bg-rose-500/20" 
-            iconColor="text-rose-400" title="Magic UI Design"
-            description="Generación automática de interfaces modernas."
-            codeContainerTitle="Terminal">
-            npm install -g &#64;magicuidesign/mcp&#64;latest
-        </app-card-code>
-
-    </div>
-    
-    <!-- Quick Install Script -->
-     <app-card-code gradientBg="bg-white/5" 
+<section class="min-h-screen pt-40 pb-2 px-6 flex flex-col items-center">
+    <div class="max-w-5xl flex flex-col gap-8">
+        <div class="text-center mb-4 animate-fade-in-up" style="opacity: 1; transform: translateY(0px);">
+            <h1 class="text-5xl font-bold text-white mb-6">Model Context Protocol</h1>
+            <p class="text-xl text-gray-300">Extiende las capacidades de Claude con herramientas especializadas</p>
+        </div>
+            <!-- Quick Install Script -->
+        <app-card-code gradientBg="bg-white/5" 
             borderBg="border-white/10" icon="iawot-shell" iconBg="" 
             iconColor="text-purple-400" title="Script de Instalación Completa"
             description="Instala todos los MCPs de una vez:"
             codeContainerTitle="Terminal">
-             <span># Instalar todos los MCPs</span>
-            <span>npm install -g &#64;modelcontextprotocol/server-sequential-thinking</span>
-            <span>npm install -g &#64;modelcontextprotocol/server-puppeteer</span>
-            <span>npm install -g &#64;magicuidesign/mcp&#64;latest</span>
+       
+            <span>npm install -g &#64;modelcontextprotocol/server-sequential-thinking</span>       
+            <span>claude mcp add-json sequential-thinking '&#123;</span>
+            <span>"command": "npx",</span>
+            <span>"args": ["-y", "&#64;modelcontextprotocol/server-sequential-thinking"]</span>
+            <span>&#125;'</span>
 
-            <span># Añadir a Claude</span>
-            <span>claude mcp add-json sequential-thinking '&#123;"command": "npx", "args": ["-y", "&#64;modelcontextprotocol/server-sequential-thinking"]&#125;'</span>
-            <span>claude mcp add-json puppeteer '&#123;"command": "npx", "args": ["-y", "&#64;modelcontextprotocol/server-puppeteer"]&#125;'</span>
+
             <span>claude mcp add --transport http context7 https://mcp.context7.com/mcp</span>
-            <span>claude mcp add-json magic '&#123;"command": "npx", "args": ["-y", "&#64;magicuidesign/mcp&#64;latest"]&#125;'</span>
+
+            <span>npm install -g &#64;modelcontextprotocol/server-puppeteer</span>
+
+            <span>claude mcp add-json puppeteer '&#123;</span>
+            <span>  "command": "npx",</span>
+            <span>  "args": ["-y", "&#64;modelcontextprotocol/server-puppeteer"]</span>
+            <span>&#125;'</span>
+
+
+            <span>npm install -g &#64;magicuidesign/mcp&#64;latest</span>
+            <span>claude mcp add-json magic '&#123;</span>
+            <span>  "command": "npx",</span>
+            <span>  "args": ["-y", "&#64;magicuidesign/mcp&#64;latest"]</span>
+            <span>&#125;'</span>
+
         </app-card-code>
 
-    
-    <!-- Important Notes -->
-    <div class="mt-8 bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-lg rounded-2xl border border-amber-500/20 p-6 animate-fade-in-up animation-delay-1200">
-        <div class="flex items-start gap-3">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lightbulb" class="lucide lucide-lightbulb w-6 h-6 text-amber-400 flex-shrink-0 mt-1"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
-        <div>
-            <h4 class="font-bold text-white mb-2">Notas Importantes</h4>
-            <ul class="space-y-1 text-gray-300 text-sm">
-            <li>• Los MCPs requieren Node.js 18+ instalado</li>
-            <li>• Reinicia Claude Desktop después de instalar</li>
-            <li>• Verifica con: <code class="bg-slate-800 px-2 py-1 rounded text-purple-400">claude mcp list</code></li>
-            </ul>
+        <!-- MCP Grid -->
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- Sequential Thinking -->
+            <app-card-code icon="iawot-brain-full" title="Sequential Thinking"
+                description="Mejora el razonamiento paso a paso para análisis más profundos."
+                codeContainerTitle="Terminal">
+
+                <span>npm install -g &#64;modelcontextprotocol/server-sequential-thinking</span>       
+                <span>claude mcp add-json sequential-thinking '&#123;</span>
+                <span>"command": "npx",</span>
+                <span>"args": ["-y", "&#64;modelcontextprotocol/server-sequential-thinking"]</span>
+                <span>&#125;'</span>
+
+            </app-card-code>
+
+            <!-- Context7 -->
+            <app-card-code gradientBg="from-cyan-500/10 to-blue-500/10" 
+                borderBg="border-cyan-500/20" icon="iawot-database" iconBg="bg-cyan-500/20" 
+                iconColor="text-cyan-400" title="Context7"
+                description="Acceso a base de conocimientos y contexto extendido."
+                codeContainerTitle="Terminal">
+
+                <span>claude mcp add --transport http context7 https://mcp.context7.com/mcp</span>
+
+            </app-card-code>
+            
+            <!-- Puppeteer -->
+            <app-card-code gradientBg="from-emerald-500/10 to-teal-500/10" 
+                borderBg="border-emerald-500/20" icon="iawot-mouse-pointer" iconBg="bg-emerald-500/20" 
+                iconColor="text-emerald-400" title="Puppeteer"
+                description="Automatización web y scraping inteligente."
+                codeContainerTitle="Terminal">
+
+                <span>claude mcp add-json puppeteer '&#123;</span>
+                <span>  "command": "npx",</span>
+                <span>  "args": ["-y", "&#64;modelcontextprotocol/server-puppeteer"]</span>
+                <span>&#125;'</span>
+
+            </app-card-code>
+
+            
+            <!-- Magic UI -->
+            <app-card-code gradientBg="from-rose-500/10 to-pink-500/10" 
+                borderBg="border-rose-500/20" icon="iawot-magic" iconBg="bg-rose-500/20" 
+                iconColor="text-rose-400" title="Magic UI Design"
+                description="Generación automática de interfaces modernas."
+                codeContainerTitle="Terminal">
+
+                <span>npm install -g &#64;magicuidesign/mcp&#64;latest</span>
+                <span>claude mcp add-json magic '&#123;</span>
+                <span>  "command": "npx",</span>
+                <span>  "args": ["-y", "&#64;magicuidesign/mcp&#64;latest"]</span>
+                <span>&#125;'</span>
+
+            </app-card-code>
+
         </div>
+        
+        <!-- Important Notes -->
+        <div class="w-full bg-gradient-to-br from-amber-500/10 to-orange-500/10 backdrop-blur-lg rounded-2xl border border-amber-500/20 p-6 animate-fade-in-up animation-delay-1200">
+            <div class="flex items-start gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="lightbulb" class="lucide lucide-lightbulb w-6 h-6 text-amber-400 flex-shrink-0 mt-1"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg>
+            <div>
+                <h4 class="font-bold text-white mb-2">Notas Importantes</h4>
+                <ul class="space-y-1 text-gray-300 text-sm">
+                <li>• Los MCPs requieren Node.js 18+ instalado</li>
+                <li>• Reinicia Claude Desktop después de instalar</li>
+                <li>• Verifica con: <code class="bg-slate-800 px-2 py-1 rounded text-purple-400">claude mcp list</code></li>
+                </ul>
+            </div>
+            </div>
         </div>
     </div>
-    </div>
+    <!-- Next Steps -->
+    <app-call-to-action callToActionTitle="¿Listo para comenzar?"
+    buttonRoute="/config" buttonText="Configuración"/>
+
 </section>

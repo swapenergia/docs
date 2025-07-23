@@ -1,4 +1,4 @@
-<section class="min-h-screen pt-24 pb-16 px-6">
+<section class="min-h-screen pt-40 pb-16 px-6">
     <div class="max-w-5xl mx-auto">
         <div class="text-center mb-16 animate-fade-in-up" style="opacity: 1; transform: translateY(0px);">
             <h1 class="text-5xl font-bold text-white mb-6">Configuración</h1>
@@ -85,7 +85,7 @@
         </div>
         
         <!-- Workspace Structure -->
-        <div class="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 animate-fade-in-up animation-delay-800" style="opacity: 1; transform: translateY(0px);">
+        <div class="mb-12 bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 animate-fade-in-up animation-delay-800" style="opacity: 1; transform: translateY(0px);">
             <h2 class="text-2xl font-bold text-white mb-6">Estructura del Workspace</h2>
             
             <div class="grid md:grid-cols-2 gap-8">
@@ -136,49 +136,12 @@
         </div>
 
         <!-- Step by Step -->
-        <div class="bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 p-8 animate-fade-in-up animation-delay-600" style="opacity: 1; transform: translateY(0px);">
-        <div class="flex items-center gap-3 mb-6">
-            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="list-ordered" class="lucide lucide-list-ordered w-5 h-5 text-white"><path d="M10 12h11"></path><path d="M10 18h11"></path><path d="M10 6h11"></path><path d="M4 10h2"></path><path d="M4 6h1v4"></path><path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg>
-            </div>
-            <h2 class="text-2xl font-bold text-white">Configuración Paso a Paso</h2>
-        </div>
-        
-            <div class="space-y-6">
-                <!-- Step 1 -->
-                <div class="flex gap-4">
-                <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span class="text-purple-400 font-bold">1</span>
-                </div>
-                <div class="flex-1">
-                    <h4 class="font-semibold text-white mb-2">Abrir directorrio del nuevo proyecto</h4>
-                    <p class="text-gray-400 text-sm mt-2">Recuerda, el repositorio se clona para ejecutar el asistente, después hay que seleccionar nuevo directorio</p>
+        <app-card-blank cardTitle="Configuración Paso a Paso">
+            <app-card-blank-section cardSectionTitle="Abrir directorrio del nuevo proyecto">
+                <p class="text-gray-400 text-sm mt-2">Recuerda, el repositorio se clona para ejecutar el asistente, después hay que seleccionar nuevo directorio</p>
+            </app-card-blank-section>
 
-                </div>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="flex gap-4">
-                <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span class="text-purple-400 font-bold">2</span>
-                </div>
-                <div class="flex-1">
-                    <h4 class="font-semibold text-white mb-2">Instalar Node.js con NVM</h4>
-                    
-                    <app-code-container title="Terminal">
-                        <span>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash</span>
-                        <span>nvm install 22</span>
-                    </app-code-container>
-                </div>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="flex gap-4">
-                <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span class="text-purple-400 font-bold">3</span>
-                </div>
-                <div class="flex-1">
-                    <h4 class="font-semibold text-white mb-2">Cargar Fichero </h4>
+            <app-card-blank-section listText="2" cardSectionTitle="Cargar Fichero">
                     <a class="hover:underline" href="github.com/bmadcode/BMAD-METHOD/blob/main/dist/teams/team-fullstack.txt" target="_blank">
                         <p class="text-gray-400 text-sm my-2">Fichero Full Stack Team</p>
                     </a>
@@ -186,26 +149,22 @@
                         [fichero full stack] --> "Your critical operating instructions are attached, do not break character as directed"
                     </app-code-container>
                     <p class="text-gray-400 text-sm mt-2">Sigue las instrucciones para autenticar tu cuenta, te pedirá autenticarte mediante URL </p>
-                </div>
-                </div>
                 
-                <!-- Step 4 -->
-                <div class="flex gap-4">
-                <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span class="text-purple-400 font-bold">4</span>
-                </div>
-                <div class="flex-1">
-                    <h4 class="font-semibold text-white mb-2">Responder preguntas que te hacen cada persona del equipo</h4>
-                    <p class="text-gray-400 text-sm mt-2">Pasaras desde la analista hasta el de las pruebas</p>
-                    <div class="p-4">
-                        
-                    </div>
-                </div>
-                </div>
+            </app-card-blank-section>
 
-            </div>
+            <app-card-blank-section listText="3" cardSectionTitle="Responder preguntas que te hacen cada persona del equipo">
+                
+                <p class="text-gray-400 text-sm mt-2">Pasaras desde la analista hasta el de las pruebas</p>
 
-        </div>
+            </app-card-blank-section>
+
+        </app-card-blank>
+
     </div>
+
+
+        <!-- Next Steps -->
+    <app-call-to-action callToActionTitle="¿Quieres ejemplos?"
+    buttonRoute="/example" buttonText="Ejemplos"/>
 
 </section>
