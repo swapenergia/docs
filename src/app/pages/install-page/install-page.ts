@@ -7,7 +7,7 @@ import { CallToAction } from "../../components/call-to-action/call-to-action";
 
 @Component({
   selector: 'app-install-page',
-  imports: [CodeContainer, RouterLink, CardBlank, CardBlankSection, CallToAction],
+  imports: [CodeContainer, CardBlank, CardBlankSection, CallToAction],
   templateUrl: './install-page.html',
   styleUrl: './install-page.css'
 })
